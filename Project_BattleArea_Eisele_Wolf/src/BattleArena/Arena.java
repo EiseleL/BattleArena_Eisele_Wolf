@@ -76,8 +76,9 @@ public class Arena {
 
 	public void simulateCombat(FighterCharacter attacker, FighterCharacter victim) {
 		System.out.println(attacker.getName() + " ist an der Reihe");
-		System.out
-				.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Fähigkeit aktivieren, 3=Fähigkeit deaktivieren)");
+		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Fähigkeit aktivieren, 3=Fähigkeit deaktivieren)");
+		String Input = ConsoleInput();
+		
 	}
 
 	private String ConsoleInput() {
