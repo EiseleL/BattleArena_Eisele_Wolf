@@ -1,11 +1,12 @@
 package BattleArena;
 
+import java.util.Scanner;
+
 public class Arena {
 	private FighterCharacter f1;
 	private FighterCharacter f2;
 	private FighterCharacter Winner;
-	private boolean SelectedFighter; 
-	
+	private boolean SelectedFighter;
 
 	public Arena(FighterCharacter f1, FighterCharacter f2) {
 		super();
@@ -30,8 +31,7 @@ public class Arena {
 	public void setF2(FighterCharacter f2) {
 		this.f2 = f2;
 	}
-	
-	
+
 	public FighterCharacter getWinner() {
 		return Winner;
 	}
@@ -42,47 +42,54 @@ public class Arena {
 
 	private boolean randomFighter() {
 		double random = Math.random();
-		if(random > 0.4) {
+		if (random > 0.4) {
 			return false;
-		}
-		else return true;
+		} else
+			return true;
 	}
-	
+
 	public void fight() {
 		FighterCharacter attacker;
 		FighterCharacter victim;
 		do {
-			if(this.SelectedFighter) {
+			if (this.SelectedFighter) {
 				attacker = f1;
 				victim = f2;
-			}
-			else {
+			} else {
 				attacker = f2;
 				victim = f1;
 			}
-			
-			
+
 			Winner = checkWinner();
 			this.SelectedFighter = !this.SelectedFighter;
-		}
-		while(Winner == null);
+		} while (Winner == null);
 	}
-	
+
 	private FighterCharacter checkWinner() {
-		if(f1.getHealth() <= 0) {
+		if (f1.getHealth() <= 0) {
 			return f2;
-		}
-		else if(f2.getHealth() <= 0) {
+		} else if (f2.getHealth() <= 0) {
 			return f1;
-		}
-		else return null;
+		} else
+			return null;
 	}
-	
+
+	public void simulateCombat(FighterCharacter attacker, FighterCharacter victim) {
+		System.out.println(attacker.getName() + " ist an der Reihe");
+		System.out
+				.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Fähigkeit aktivieren, 3=Fähigkeit deaktivieren)");
+	}
+
+	private String ConsoleInput() {
+		Scanner scanner = new Scanner(System.in);
+		String a = scanner.nextLine();
+		scanner.close();
+		return a;
+	}
+
 	public void printInfos() {
 		System.out.println("Infos Fighter1: " + f1 + "\n");
 		System.out.println("Infos Fighter2: " + f2);
 	}
-	
-	
-	
+
 }
