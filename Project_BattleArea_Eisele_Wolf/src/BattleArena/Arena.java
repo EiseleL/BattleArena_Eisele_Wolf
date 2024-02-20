@@ -4,6 +4,7 @@ public class Arena {
 	private FighterCharacter f1;
 	private FighterCharacter f2;
 	private FighterCharacter Winner;
+	private boolean SelectedFighter; 
 	
 
 	public Arena(FighterCharacter f1, FighterCharacter f2) {
@@ -11,6 +12,7 @@ public class Arena {
 		this.f1 = f1;
 		this.f2 = f2;
 		Winner = null;
+		randomFighter();
 	}
 
 	public FighterCharacter getF1() {
@@ -38,9 +40,17 @@ public class Arena {
 		Winner = winner;
 	}
 
+	private boolean randomFighter() {
+		double random = Math.random();
+		if(random > 0.4) {
+			return false;
+		}
+		else return true;
+	}
 	
 	public void fight() {
 		do {
+			
 			
 			Winner = checkWinner();
 		}
