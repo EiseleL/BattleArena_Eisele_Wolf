@@ -49,10 +49,21 @@ public class Arena {
 	}
 	
 	public void fight() {
+		FighterCharacter attacker;
+		FighterCharacter victim;
 		do {
+			if(this.SelectedFighter) {
+				attacker = f1;
+				victim = f2;
+			}
+			else {
+				attacker = f2;
+				victim = f1;
+			}
 			
 			
 			Winner = checkWinner();
+			this.SelectedFighter = !this.SelectedFighter;
 		}
 		while(Winner == null);
 	}
