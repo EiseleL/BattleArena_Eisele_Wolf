@@ -42,8 +42,19 @@ public class Arena {
 	public void fight() {
 		do {
 			
+			Winner = checkWinner();
 		}
 		while(Winner == null);
+	}
+	
+	private FighterCharacter checkWinner() {
+		if(f1.getHealth() <= 0) {
+			return f2;
+		}
+		else if(f2.getHealth() <= 0) {
+			return f1;
+		}
+		else return null;
 	}
 	
 	public void printInfos() {
