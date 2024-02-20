@@ -1,10 +1,11 @@
 package BattleArena;
 
-public class FighterCharacters {
+public class FighterCharacter {
 	
 	private String name;
-	private int lebenspunkte;
+	private int health;
 	private boolean specialAbilityActive;
+	
 	
 	
 	
