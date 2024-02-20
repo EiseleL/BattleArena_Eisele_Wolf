@@ -6,11 +6,11 @@ public abstract class FighterCharacter {
 	private int health;
 	private boolean specialAbilityActive;
 
-	public FighterCharacter(String name, int health, boolean specialAbilityActive) {
+	public FighterCharacter(String name) {
 		super();
 		this.name = name;
-		this.health = health;
-		this.specialAbilityActive = specialAbilityActive;
+		this.health = 100;
+		this.specialAbilityActive = false;
 	}
 
 	public String getName() {
