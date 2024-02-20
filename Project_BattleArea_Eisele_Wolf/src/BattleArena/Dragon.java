@@ -9,7 +9,9 @@ public class Dragon extends FighterCharacter {
 		
 	}
 
-	@Override
+	/**
+	 * Method calculate the attack Number for Dragon
+	 */
 	public int attack() {
 		int attacNumber = ThreadLocalRandom.current().nextInt(20,25);
 		if(this.isSpecialAbilityActive()) {
@@ -19,12 +21,17 @@ public class Dragon extends FighterCharacter {
 		}
 	}
 	
-	
+	/**
+	 * Method set ability to true and give 10 bonus health points
+	 */
 	public void activateAbility() {
 		this.setSpecialAbilityActive(true);
 		this.setBonushealth(getBonushealth()+10);
 	}
 	
+	/**
+	 * Method set ability to false and removed 10 bonus health points
+	 */
 	public void deactivateAbility() {
 		this.setSpecialAbilityActive(false);
 		if(!((this.getBonushealth() - 10) >= 0)) {
