@@ -93,6 +93,7 @@ public class Arena {
 	/**
 	 * This method prints which player is on the move, and asks them what they want to do, then attacks or
 	 * changes the State of the ability
+	 * 
 	 * @param attacker lets the method know that this player is on his move
 	 * @param victim   this is the other player which could be attacked by the
 	 *                 attacker
