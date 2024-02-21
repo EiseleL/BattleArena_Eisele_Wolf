@@ -91,14 +91,15 @@ public class Arena {
 	}
 
 	/**
-	 * 
+	 * This method prints which player is on the move, and asks them what they want to do, then attacks or
+	 * changes the State of the ability
 	 * @param attacker lets the method know that this player is on his move
 	 * @param victim   this is the other player which could be attacked by the
 	 *                 attacker
 	 */
 	public void simulateCombat(FighterCharacter attacker, FighterCharacter victim) {
 		System.out.println(attacker.getName() + " ist an der Reihe");
-		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Fähigkeitsstatus umschalten");
+		System.out.println("Bitte geben Sie ihren Zug an (1=angreifen, 2=Fähigkeitsstatus umschalten)");
 		String Input = ConsoleInput();
 		switch (Input) {
 		case "1": // angreifen
