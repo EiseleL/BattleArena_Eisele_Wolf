@@ -48,6 +48,12 @@ public abstract class FighterCharacter {
 		this.specialAbilityActive = specialAbilityActive;
 	}
 	
+	/**
+	 * Method deducts life from the FighterCharacter depending on how many lives he has.
+	 * If more lives are to be deducted than are available, the life counter is set to 0.
+	 * If bonus lives (bonushealth) are available, these will be deducted beforehand.
+	 * @param points
+	 */
 	public void gotDamage(int points) {
 		if(this.bonushealth > 0) {
 			if(!((this.bonushealth - points) <= 0)) {
