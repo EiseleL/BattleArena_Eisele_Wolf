@@ -13,11 +13,11 @@ public class Dragon extends FighterCharacter {
 	 * Method calculate the attack Number for Dragon
 	 */
 	public int attack() {
-		int attacNumber = ThreadLocalRandom.current().nextInt(20,25);
+		int attackNumber = ThreadLocalRandom.current().nextInt(20,25);
 		if(this.isSpecialAbilityActive()) {
-			return attacNumber -= ThreadLocalRandom.current().nextInt(5,10);
+			return attackNumber -= ThreadLocalRandom.current().nextInt(5,10);
 		}else {
-			return attacNumber;
+			return attackNumber;
 		}
 	}
 	
