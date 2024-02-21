@@ -1,5 +1,5 @@
 package BattleArena;
 
-public class test {
+public class App {
 
 }
