@@ -59,6 +59,8 @@ public class Arena {
 				attacker = f2;
 				victim = f1;
 			}
+			
+			simulateCombat(attacker, victim);
 
 			Winner = checkWinner();
 			this.SelectedFighter = !this.SelectedFighter;
@@ -78,6 +80,17 @@ public class Arena {
 		System.out.println(attacker.getName() + " ist an der Reihe");
 		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Fähigkeit aktivieren, 3=Fähigkeit deaktivieren)");
 		String Input = ConsoleInput();
+		switch (Input) {
+		case "1": //angreifen
+			int value = attacker.attack();
+			victim.gotDamage(value);
+			break;
+		case "2": // aktivieren
+			break;
+		case "3": //deaktivieren
+			break;
+			
+		}
 		
 	}
 
