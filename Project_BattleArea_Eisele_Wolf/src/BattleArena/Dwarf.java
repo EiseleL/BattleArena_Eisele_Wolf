@@ -26,9 +26,9 @@ public class Dwarf extends FighterCharacter{
 
 	@Override
 	public int attack() {
-		double random = Math.random();
 		int attacNumber = ThreadLocalRandom.current().nextInt(20,25);
 		if(this.isSpecialAbilityActive()) {
+			double random = Math.random();
 			if(this.getHealth() <= 10) {
 				if(random <= 0.7) {
 					return attacNumber*2;
