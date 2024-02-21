@@ -68,10 +68,4 @@ public abstract class FighterCharacter {
 	
 	public abstract int attack();
 	
-	
-	
-	
-	
-	
-
 }

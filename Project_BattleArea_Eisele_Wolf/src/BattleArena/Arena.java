@@ -40,22 +40,14 @@ public class Arena {
 		Winner = winner;
 	}
 
-	/**
-	 * This method randomly decides which Fighter has the first move
-	 * 
-	 * @return true or false value
-	 */
 	private boolean randomFighter() {
 		double random = Math.random();
 		if (random > 0.4) {
 			return false;
 		} else
-			return true;
+			return true; 
 	}
 
-	/**
-	 * This Method will run until the game has detected a winner
-	 */
 	public void fight() {
 		FighterCharacter attacker;
 		FighterCharacter victim;
@@ -67,7 +59,7 @@ public class Arena {
 				attacker = f2;
 				victim = f1;
 			}
-			printInfo();
+			
 			simulateCombat(attacker, victim);
 
 			Winner = checkWinner();
@@ -75,12 +67,6 @@ public class Arena {
 		} while (Winner == null);
 	}
 
-	/**
-	 * this Method checks if there is a player witch 0 hearts - if that so the other
-	 * player wins
-	 * 
-	 * @return the player which wins the game - if null there is no winner
-	 */
 	private FighterCharacter checkWinner() {
 		if (f1.getHealth() <= 0) {
 			return f2;
@@ -90,41 +76,24 @@ public class Arena {
 			return null;
 	}
 
-	/**
-	 * This method prints which player is on the move, and asks them what they want to do, then attacks or
-	 * changes the State of the ability
-	 * 
-	 * @param attacker lets the method know that this player is on his move
-	 * @param victim   this is the other player which could be attacked by the
-	 *                 attacker
-	 */
 	public void simulateCombat(FighterCharacter attacker, FighterCharacter victim) {
 		System.out.println(attacker.getName() + " ist an der Reihe");
-		System.out.println("Bitte geben Sie ihren Zug an (1=angreifen, 2=Fähigkeitsstatus umschalten)");
+		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Fähigkeit aktivieren, 3=Fähigkeit deaktivieren)");
 		String Input = ConsoleInput();
 		switch (Input) {
-		case "1": // angreifen
+		case "1": //angreifen
 			int value = attacker.attack();
 			victim.gotDamage(value);
 			break;
-		case "2": // togglen
-			if (attacker.isSpecialAbilityActive()) {
-				attacker.activateAbility();
-			} else {
-				attacker.activateAbility();
-			}
-
+		case "2": // aktivieren
 			break;
+		case "3": //deaktivieren
+			break;
+			
 		}
-
+		
 	}
 
-	/**
-	 * This method will create a Scanner an get the String Input from the console
-	 * form the user
-	 * 
-	 * @return the value which was scanned
-	 */
 	private String ConsoleInput() {
 		Scanner scanner = new Scanner(System.in);
 		String a = scanner.nextLine();
@@ -132,12 +101,9 @@ public class Arena {
 		return a;
 	}
 
-	/**
-	 * This method will print out the Info from the players to the console
-	 */
-	public void printInfo() {
-		System.out.println("Info " + f1.getName() + ": \t" + f1 + "\n");
-		System.out.println("Info " + f2.getName() + ": \t" + f2);
+	public void printInfos() {
+		System.out.println("Infos Fighter1: " + f1 + "\n");
+		System.out.println("Infos Fighter2: " + f2);
 	}
 
 }

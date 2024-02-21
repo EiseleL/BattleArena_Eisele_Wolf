@@ -6,10 +6,11 @@ public class Dwarf extends FighterCharacter{
 
 	public Dwarf(String name) {
 		super(name);
-		// TODO Auto-generated constructor stub
 	}
 
-	
+	/**
+	 * Method activate Ability if health < 50 
+	 */
 	public void activateAbility() {
 		if(this.getHealth() < 50) {
 			this.setSpecialAbilityActive(true);
@@ -26,7 +27,9 @@ public class Dwarf extends FighterCharacter{
 		
 	}
 
-	@Override
+	/**
+	 * Method calculate attackNumber random between 20 - 25, If the health is below a limit, the probability of a double attack value is increased when the special effect is activated. 
+	 */
 	public int attack() {
 		int attackNumber = ThreadLocalRandom.current().nextInt(20,25);
 		if(this.isSpecialAbilityActive()) {
@@ -49,11 +52,7 @@ public class Dwarf extends FighterCharacter{
 		}
 		return attackNumber;
 	}
-	
-	
-	
-	
-	
-	
 
+	
+	
 }
