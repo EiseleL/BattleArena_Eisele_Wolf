@@ -53,6 +53,8 @@ public class Dwarf extends FighterCharacter{
 		return attackNumber;
 	}
 
-	
+	public String toString() {
+		return this.toString();
+	}
 	
 }
