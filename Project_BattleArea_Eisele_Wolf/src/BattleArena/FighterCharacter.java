@@ -68,6 +68,12 @@ public abstract class FighterCharacter {
 			}
 	}
 	
+	public String toString() {
+		return "FighterCharacter: " + name + "/n"+
+				"Leben + Bonus Leben: " + health + bonushealth + "/n"+
+				"Spezialfertigkeit: " + specialAbilityActive;
+	}
+
 	public abstract void activateAbility();
 	
 	public abstract void deactivateAbility();
