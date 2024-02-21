@@ -133,9 +133,9 @@ public class Arena {
 	/**
 	 * This method will print out the Info from the players to the console
 	 */
-	public void printInfos() {
-		System.out.println("Infos Fighter1: " + f1 + "\n");
-		System.out.println("Infos Fighter2: " + f2);
+	public void printInfo() {
+		System.out.println("Info " + f1.getName() + ": \t" + f1 + "\n");
+		System.out.println("Info " + f2.getName() + ": \t" + f2);
 	}
 
 }
