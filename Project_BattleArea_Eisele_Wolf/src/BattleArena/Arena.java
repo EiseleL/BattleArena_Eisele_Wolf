@@ -78,18 +78,22 @@ public class Arena {
 
 	public void simulateCombat(FighterCharacter attacker, FighterCharacter victim) {
 		System.out.println(attacker.getName() + " ist an der Reihe");
-		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Fähigkeit aktivieren, 3=Fähigkeit deaktivieren)");
+		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Fähigkeitsstatus umschalten");
 		String Input = ConsoleInput();
 		switch (Input) {
 		case "1": //angreifen
 			int value = attacker.attack();
 			victim.gotDamage(value);
 			break;
-		case "2": // aktivieren
-			break;
-		case "3": //deaktivieren
-			break;
+		case "2": // togglen
+			if(attacker.isSpecialAbilityActive()) {
+				attacker.activateAbility();
+			}
+			else {
+				attacker.activateAbility();
+			}
 			
+			break;
 		}
 		
 	}
