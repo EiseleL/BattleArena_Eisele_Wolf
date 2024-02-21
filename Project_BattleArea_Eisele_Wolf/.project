@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>SWP_Kapitel4_Vererbung_Beispiel_4_6.pdf</name>
-			<type>1</type>
-			<location>C:/Mac/Home/Downloads/SWP_Kapitel4_Vererbung_Beispiel_4_6.pdf</location>
-		</link>
-	</linkedResources>
 </projectDescription>
