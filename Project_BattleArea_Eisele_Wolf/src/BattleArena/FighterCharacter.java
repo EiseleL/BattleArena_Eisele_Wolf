@@ -49,20 +49,17 @@ public abstract class FighterCharacter {
 	}
 	
 	public void gotDamage(int points) {
-		if(this.bonushealth < 0) {
-			if(!((this.bonushealth - points) >= 0)) {
+		if(this.bonushealth > 0) {
+			if(!((this.bonushealth - points) <= 0)) {
 				points -= this.bonushealth;
 				this.bonushealth = 0;
-				
-				if(!((this.health - points) < 0)) {
-					this.health -= points;
-				}else{
-					this.health = 0;
-				}
 			}
 		}
-		
-		
+		if(!((this.health - points) < 0)) {
+			this.health -= points;
+			}else{
+				this.health = 0;
+			}
 	}
 	
 	public abstract void activateAbility();
