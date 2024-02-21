@@ -67,7 +67,7 @@ public class Arena {
 				attacker = f2;
 				victim = f1;
 			}
-
+			printInfo();
 			simulateCombat(attacker, victim);
 
 			Winner = checkWinner();
