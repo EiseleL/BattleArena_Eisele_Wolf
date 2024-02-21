@@ -9,7 +9,7 @@ public class Dwarf extends FighterCharacter{
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
+	
 	public void activateAbility() {
 		if(this.getHealth() < 50) {
 			this.setSpecialAbilityActive(true);
@@ -18,9 +18,11 @@ public class Dwarf extends FighterCharacter{
 		
 	}
 
-	@Override
+	/**
+	 * Method deactivate Ability
+	 */
 	public void deactivateAbility() {
-		// TODO Auto-generated method stub
+		this.setSpecialAbilityActive(false);
 		
 	}
 
