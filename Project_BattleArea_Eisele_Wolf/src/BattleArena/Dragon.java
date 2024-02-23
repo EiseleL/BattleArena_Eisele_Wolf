@@ -4,7 +4,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Dragon extends FighterCharacter {
 
-	public Dragon(String name, int health, boolean specialAbilityActive) {
+	public Dragon(String name) {
 		super(name);
 		
 	}
