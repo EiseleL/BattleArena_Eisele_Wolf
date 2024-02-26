@@ -1,4 +1,4 @@
-package BattleArena;
+package Project_BattleArea_Eisele_Wolf.src;
 
 public class App {
 
@@ -11,6 +11,4 @@ public class App {
 		
 		
 	}
-	
-
 }

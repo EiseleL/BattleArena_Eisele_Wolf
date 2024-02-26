@@ -1,4 +1,4 @@
-package BattleArena;
+package Project_BattleArea_Eisele_Wolf.src;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -41,18 +41,15 @@ public class Dragon extends FighterCharacter {
 		}
 	}
 
+	/*
 	public String toString() {
 		return this.toString();
 	}
-
-	
-	
-	
-	
+*/
 	
 }
 
 
 
 //TODO
-	//Können schaden nehemn beim Angriff
+	//Kï¿½nnen schaden nehemn beim Angriff

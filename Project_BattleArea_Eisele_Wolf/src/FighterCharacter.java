@@ -1,4 +1,4 @@
-package BattleArena;
+package Project_BattleArea_Eisele_Wolf.src;
 
 public abstract class FighterCharacter {
 
@@ -70,7 +70,7 @@ public abstract class FighterCharacter {
 	
 	public String toString() {
 		return "FighterCharacter: " + name + "/n"+
-				"Leben + Bonus Leben: " + health + bonushealth + "/n"+
+				"Leben + Bonus Leben: " + (health + bonushealth) + "/n"+
 				"Spezialfertigkeit: " + specialAbilityActive;
 	}
 

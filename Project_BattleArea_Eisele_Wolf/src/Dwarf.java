@@ -1,4 +1,4 @@
-package BattleArena;
+package Project_BattleArea_Eisele_Wolf.src;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -52,9 +52,9 @@ public class Dwarf extends FighterCharacter{
 		}
 		return attackNumber;
 	}
-
+/*
 	public String toString() {
 		return this.toString();
 	}
-	
+*/
 }
