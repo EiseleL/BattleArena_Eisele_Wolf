@@ -1,6 +1,8 @@
-package BattleArena;
+package Project_BattleArea_Eisele_Wolf.src;
 
 import java.util.concurrent.ThreadLocalRandom;
+
+import BattleArena.FighterCharacter;
 
 public class Dwarf extends FighterCharacter{
 
