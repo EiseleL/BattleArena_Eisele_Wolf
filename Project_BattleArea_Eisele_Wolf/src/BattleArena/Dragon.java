@@ -45,11 +45,7 @@ public class Dragon extends FighterCharacter {
 		return this.toString();
 	}
 
-	
-	
-	
-	
-	
+
 }
 
 
