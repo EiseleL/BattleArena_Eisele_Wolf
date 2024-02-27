@@ -79,13 +79,13 @@ public class Arena {
 	private void simulateCombat(FighterCharacter attacker, FighterCharacter victim) {
 		System.out.println(attacker.getName() + " ist an der Reihe");
 		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Faehigkeit toggeln)");
-		String Input = ConsoleInput();
+		int Input = ConsoleInput();
 		switch (Input) {
-		case "1": //angreifen
+		case 1: //angreifen
 			int value = attacker.attack();
 			victim.gotDamage(value);
 			break;
-		case "2": // aktivieren
+		case 2: // aktivieren
 			if(attacker.isSpecialAbilityActive()) {
 				attacker.setSpecialAbilityActive(false);
 			}
@@ -102,9 +102,9 @@ public class Arena {
 		
 	}
 
-	private String ConsoleInput() {
+	private int ConsoleInput() {
 		Scanner scanner = new Scanner(System.in);
-		String a = scanner.nextLine();
+		int a = scanner.nextInt();
 		scanner.close();
 		return a;
 	}
