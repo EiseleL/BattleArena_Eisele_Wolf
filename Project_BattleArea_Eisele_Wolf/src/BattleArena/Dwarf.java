@@ -2,7 +2,7 @@ package BattleArena;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Dwarf extends FighterCharacter{
+public class Dwarf extends BattleArena.FighterCharacter{
 
 	public Dwarf(String name) {
 		super(name);
