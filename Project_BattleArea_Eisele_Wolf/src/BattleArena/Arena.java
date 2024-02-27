@@ -36,7 +36,7 @@ public class Arena {
 		return Winner;
 	}
 
-	public void setWinner(FighterCharacter winner) {
+	private void setWinner(FighterCharacter winner) {
 		Winner = winner;
 	}
 
@@ -76,7 +76,7 @@ public class Arena {
 			return null;
 	}
 
-	public void simulateCombat(FighterCharacter attacker, FighterCharacter victim) {
+	private void simulateCombat(FighterCharacter attacker, FighterCharacter victim) {
 		System.out.println(attacker.getName() + " ist an der Reihe");
 		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Faehigkeit toggeln)");
 		String Input = ConsoleInput();
