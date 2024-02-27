@@ -7,6 +7,10 @@ public class Dwarf extends BattleArena.FighterCharacter{
 	public Dwarf(String name) {
 		super(name);
 	}
+	
+	public String getClassName() {
+		return "Dwarf";
+	}
 
 	/**
 	 * Method activate Ability if health < 50 

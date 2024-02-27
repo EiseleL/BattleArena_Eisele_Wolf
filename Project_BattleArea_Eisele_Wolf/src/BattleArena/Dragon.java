@@ -8,6 +8,10 @@ public class Dragon extends FighterCharacter {
 		super(name);
 		
 	}
+	
+	public String getClassName() {
+		return "Dragon";
+	}
 
 	/**
 	 * Method calculate the attack Number for Dragon
