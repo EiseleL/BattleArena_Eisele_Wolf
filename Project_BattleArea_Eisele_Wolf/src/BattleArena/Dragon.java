@@ -41,9 +41,6 @@ public class Dragon extends FighterCharacter {
 		}
 	}
 
-	public String toString() {
-		return this.toString();
-	}
 
 
 }

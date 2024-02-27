@@ -52,9 +52,5 @@ public class Dwarf extends BattleArena.FighterCharacter{
 		}
 		return attackNumber;
 	}
-/*
-	public String toString() {
-		return this.toString();
-	}
-*/
+
 }
