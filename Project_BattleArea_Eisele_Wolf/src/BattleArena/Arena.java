@@ -110,7 +110,7 @@ public class Arena {
 	}
 
 	public void printInfo() {
-		System.out.println(f1 + "\n");
+		System.out.println(f1);
 		System.out.println(f2);
 	}
 
