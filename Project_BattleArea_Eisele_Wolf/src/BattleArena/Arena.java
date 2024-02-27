@@ -59,7 +59,7 @@ public class Arena {
 				attacker = f2;
 				victim = f1;
 			}
-			
+			printInfo();
 			simulateCombat(attacker, victim);
 
 			Winner = checkWinner();
@@ -78,7 +78,7 @@ public class Arena {
 
 	public void simulateCombat(FighterCharacter attacker, FighterCharacter victim) {
 		System.out.println(attacker.getName() + " ist an der Reihe");
-		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Fï¿½higkeit aktivieren, 3=Fï¿½higkeit deaktivieren)");
+		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Faehigkeit toggeln)");
 		String Input = ConsoleInput();
 		switch (Input) {
 		case "1": //angreifen
@@ -86,8 +86,16 @@ public class Arena {
 			victim.gotDamage(value);
 			break;
 		case "2": // aktivieren
+			if(attacker.isSpecialAbilityActive()) {
+				attacker.setSpecialAbilityActive(false);
+			}
+			else {
+				attacker.setSpecialAbilityActive(true);
+			}
 			break;
-		case "3": //deaktivieren
+		default:
+			System.err.println("Bitte gültigen Wert eingeben!");
+			simulateCombat(attacker, victim);
 			break;
 			
 		}
@@ -101,9 +109,9 @@ public class Arena {
 		return a;
 	}
 
-	public void printInfos() {
-		System.out.println("Infos Fighter1: " + f1 + "\n");
-		System.out.println("Infos Fighter2: " + f2);
+	public void printInfo() {
+		System.out.println(f1 + "\n");
+		System.out.println(f2);
 	}
 
 }
