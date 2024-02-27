@@ -88,10 +88,10 @@ public class Arena {
 			break;
 		case 2: // aktivieren
 			if(attacker.isSpecialAbilityActive()) {
-				attacker.setSpecialAbilityActive(false);
+				attacker.deactivateAbility();
 			}
 			else {
-				attacker.setSpecialAbilityActive(true);
+				attacker.activateAbility();
 			}
 			break;
 		default:
