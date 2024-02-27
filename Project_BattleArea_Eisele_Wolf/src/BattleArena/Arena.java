@@ -49,6 +49,7 @@ public class Arena {
 	}
 
 	public void fight() {
+		Scanner scanner = new Scanner(System.in);
 		FighterCharacter attacker;
 		FighterCharacter victim;
 		do {
@@ -60,7 +61,7 @@ public class Arena {
 				victim = f1;
 			}
 			printInfo();
-			simulateCombat(attacker, victim);
+			simulateCombat(attacker, victim, scanner);
 
 			this.setWinner(checkWinner());
 			this.SelectedFighter = !this.SelectedFighter;
@@ -76,10 +77,10 @@ public class Arena {
 			return null;
 	}
 
-	private void simulateCombat(FighterCharacter attacker, FighterCharacter victim) {
+	private void simulateCombat(FighterCharacter attacker, FighterCharacter victim, Scanner scanner) {
 		System.out.println(attacker.getName() + " ist an der Reihe");
 		System.out.println("Bitte geben Sie ihren Zug an(1=angreifen, 2=Faehigkeit toggeln)");
-		int Input = ConsoleInput();
+		int Input = ConsoleInput(scanner);
 		switch (Input) {
 		case 1: //angreifen
 			int value = attacker.attack();
@@ -95,17 +96,15 @@ public class Arena {
 			break;
 		default:
 			System.err.println("Bitte gültigen Wert eingeben!");
-			simulateCombat(attacker, victim);
+			simulateCombat(attacker, victim, scanner);
 			break;
 			
 		}
 		
 	}
 
-	private int ConsoleInput() {
-		Scanner scanner = new Scanner(System.in);
+	private int ConsoleInput(Scanner scanner) {
 		int a = scanner.nextInt();
-		scanner.close();
 		return a;
 	}
 
