@@ -9,6 +9,8 @@ public class App {
 		
 		Arena Arena = new Arena(d1, z1);
 		
+		Arena.fight();
+		
 		
 	}
 }
