@@ -76,10 +76,12 @@ public abstract class FighterCharacter {
 	}
 	
 	public String toString() {
-		return "FighterCharacter: " + name + "/n"+
-				"Leben + Bonus Leben: " + (health + bonushealth) + "/n"+
-				"Spezialfertigkeit: " + specialAbilityActive;
+		return "FighterCharacter: "+ this.getClassName() + ": " + name + "\n"+
+				"Leben + Bonus Leben: " + (health + bonushealth) + "\n"+
+				"Spezialfertigkeit: " + specialAbilityActive + "\n";
 	}
+	
+	public abstract String getClassName(); 
 
 	public abstract void activateAbility();
 	

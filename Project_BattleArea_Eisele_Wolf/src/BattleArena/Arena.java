@@ -62,9 +62,9 @@ public class Arena {
 			printInfo();
 			simulateCombat(attacker, victim);
 
-			Winner = checkWinner();
+			this.setWinner(checkWinner());
 			this.SelectedFighter = !this.SelectedFighter;
-		} while (Winner == null);
+		} while (this.getWinner() == null);
 	}
 
 	private FighterCharacter checkWinner() {
@@ -110,7 +110,7 @@ public class Arena {
 	}
 
 	public void printInfo() {
-		System.out.println(f1 + "\n");
+		System.out.println(f1);
 		System.out.println(f2);
 	}
 
