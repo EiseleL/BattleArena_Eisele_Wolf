@@ -95,7 +95,9 @@ public class Arena {
 				attacker.deactivateAbility();
 			}
 			else {
-				attacker.activateAbility();
+				if(!attacker.activateAbility()) {
+					simulateCombat(attacker, victim, scanner);
+				}
 			}
 			break;
 		default:
