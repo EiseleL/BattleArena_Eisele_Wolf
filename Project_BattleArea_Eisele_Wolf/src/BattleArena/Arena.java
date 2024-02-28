@@ -1,6 +1,7 @@
 package BattleArena;
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Arena {
 	private FighterCharacter f1;
@@ -13,7 +14,7 @@ public class Arena {
 		this.f1 = f1;
 		this.f2 = f2;
 		Winner = null;
-		randomFighter();
+		SelectedFighter = randomFighter();
 	}
 
 	public FighterCharacter getF1() {
@@ -41,8 +42,8 @@ public class Arena {
 	}
 
 	private boolean randomFighter() {
-		double random = Math.random();
-		if (random > 0.5) {
+		int random = ThreadLocalRandom.current().nextInt(1,2);
+		if (random == 1) {
 			return false;
 		} else
 			return true; 
