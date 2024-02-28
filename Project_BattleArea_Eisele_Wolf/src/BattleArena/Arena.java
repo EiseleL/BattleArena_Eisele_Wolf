@@ -66,6 +66,9 @@ public class Arena {
 			this.setWinner(checkWinner());
 			this.SelectedFighter = !this.SelectedFighter;
 		} while (this.getWinner() == null);
+		
+		System.out.println("--- Das Spiel ist vorbei! ---");
+		System.out.println(this.Winner.getClassName() + " " + this.Winner.getName() + " hat gewonnen");
 	}
 
 	private FighterCharacter checkWinner() {
