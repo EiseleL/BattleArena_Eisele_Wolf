@@ -42,7 +42,7 @@ public class Arena {
 
 	private boolean randomFighter() {
 		double random = Math.random();
-		if (random > 0.4) {
+		if (random > 0.5) {
 			return false;
 		} else
 			return true; 
