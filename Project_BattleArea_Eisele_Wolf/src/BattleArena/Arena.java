@@ -61,8 +61,8 @@ public class Arena {
 	 * each fighter alternately attacking the other until one of them wins.
 	 * 
 	 */
-	public void fight() {
-		Scanner scanner = new Scanner(System.in);
+	public void fight(Scanner scanner) {
+		
 		FighterCharacter attacker;
 		FighterCharacter victim;
 		do {

@@ -1,8 +1,11 @@
 package BattleArena;
 
+import java.util.Scanner;
+
 public class App {
 
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
 		
 		
 		System.out.println("Spieler 1: Wähle deinen Spielcharakter");
@@ -18,8 +21,8 @@ public class App {
 		
 		Arena Arena = new Arena(d1, z1);
 		
-		Arena.fight();
+		Arena.fight(scanner);
 		
-		
+		scanner.close();
 	}
 }
