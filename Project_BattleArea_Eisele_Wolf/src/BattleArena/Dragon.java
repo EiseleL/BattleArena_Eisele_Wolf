@@ -28,21 +28,23 @@ public class Dragon extends FighterCharacter {
 	/**
 	 * Method set ability to true and give 10 bonus health points
 	 */
-	public void activateAbility() {
+	public boolean activateAbility() {
 		this.setSpecialAbilityActive(true);
 		this.setBonushealth(getBonushealth()+10);
+		return true;
 	}
 	
 	/**
 	 * Method set ability to false and removed 10 bonus health points
 	 */
-	public void deactivateAbility() {
+	public boolean deactivateAbility() {
 		this.setSpecialAbilityActive(false);
 		if(!((this.getBonushealth() - 10) >= 0)) {
 			this.setBonushealth(getBonushealth()-10);
 		}else {
 			this.setBonushealth(0);
 		}
+		return true;
 	}
 
 

@@ -15,11 +15,13 @@ public class Dwarf extends BattleArena.FighterCharacter{
 	/**
 	 * Method activate Ability if health < 50 
 	 */
-	public void activateAbility() {
+	public boolean activateAbility() {
 		if(this.getHealth() < 50) {
 			this.setSpecialAbilityActive(true);
+			return true;
 		}else{
 			System.err.println("Ein Zwerg kann erst ab 50 Lebenspunkte, seine Spezialfähigkeiten einsetzen");
+			return false;
 		}
 		
 		
@@ -28,9 +30,9 @@ public class Dwarf extends BattleArena.FighterCharacter{
 	/**
 	 * Method deactivate Ability
 	 */
-	public void deactivateAbility() {
+	public boolean deactivateAbility() {
 		this.setSpecialAbilityActive(false);
-		
+		return true;
 	}
 
 	/**

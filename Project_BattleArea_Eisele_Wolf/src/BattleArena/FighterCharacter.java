@@ -80,9 +80,9 @@ public abstract class FighterCharacter {
 	
 	public abstract String getClassName(); 
 
-	public abstract void activateAbility();
+	public abstract boolean activateAbility();
 	
-	public abstract void deactivateAbility();
+	public abstract boolean deactivateAbility();
 	
 	public abstract int attack();
 	
