@@ -48,7 +48,7 @@ public class Arena {
 	 *         otherwise.
 	 */
 	private boolean randomFighter() {
-		int random = ThreadLocalRandom.current().nextInt(1, 2);
+		int random = ThreadLocalRandom.current().nextInt(1, 3);//Endwert ist immer exklusive
 		if (random == 1) {
 			return false;
 		} else
