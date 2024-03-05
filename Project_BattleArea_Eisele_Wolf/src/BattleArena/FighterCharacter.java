@@ -55,16 +55,13 @@ public abstract class FighterCharacter {
 	 * @param points
 	 */
 	public void gotDamage(int points) {
-		int tmp = 0;
 		
 		if(this.bonushealth > 0) {
 			if(!((this.bonushealth - points) <= 0)) {
 				this.bonushealth -= points;
 				points = 0;
 			}else {
-				this.bonushealth = tmp;
-				this.bonushealth -= points;
-				points = tmp - this.bonushealth;
+				points -= this.bonushealth;
 				this.bonushealth = 0;
 			}
 		}
