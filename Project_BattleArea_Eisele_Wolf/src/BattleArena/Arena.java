@@ -66,7 +66,7 @@ public class Arena {
 		FighterCharacter attacker;
 		FighterCharacter victim;
 		do {
-			if (this.SelectedFighter) {
+			if (this.SelectedFighter == true) {
 				attacker = f1;
 				victim = f2;
 			} else {
