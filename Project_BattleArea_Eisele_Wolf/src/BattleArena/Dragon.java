@@ -17,9 +17,9 @@ public class Dragon extends FighterCharacter {
 	 * Method calculate the attack Number for Dragon
 	 */
 	public int attack() {
-		int attackNumber = ThreadLocalRandom.current().nextInt(20,25);
+		int attackNumber = ThreadLocalRandom.current().nextInt(20,25+1);
 		if(this.isSpecialAbilityActive()) {
-			return attackNumber -= ThreadLocalRandom.current().nextInt(5,10);
+			return attackNumber -= ThreadLocalRandom.current().nextInt(5,10+1);
 		}else {
 			return attackNumber;
 		}
@@ -39,7 +39,7 @@ public class Dragon extends FighterCharacter {
 	 */
 	public boolean deactivateAbility() {
 		this.setSpecialAbilityActive(false);
-		if(!((this.getBonushealth() - 10) >= 0)) {
+		if(((this.getBonushealth() - 10) >= 0)) {
 			this.setBonushealth(getBonushealth()-10);
 		}else {
 			this.setBonushealth(0);
